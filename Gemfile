@@ -31,4 +31,8 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Gems Trabalho Qualidade Software
+
 gem 'pg'
+gem 'materialize-sass'
+gem 'material_icons' 
