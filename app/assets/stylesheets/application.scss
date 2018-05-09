@@ -18,8 +18,21 @@
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+$pink: #ee6e73;
+
+.brand-logo {
+  &:hover {
+    background-color: $pink;
+  }
+}
+
+.nav-item {
+  height: 64px;
+  padding-top: 24px;
+}
+
 .material-pink {
-  color: #ee6e73;
+  color: $pink;
 }
 
 .material-gray {
