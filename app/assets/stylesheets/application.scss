@@ -16,3 +16,17 @@
 
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.material-pink {
+  color: #ee6e73;
+}
+
+.material-gray {
+  color: #666;
+}
+
+.material-white {
+  &:visited {
+    color: #fff;  
+  }
+}

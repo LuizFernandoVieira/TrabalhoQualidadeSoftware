@@ -1,33 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Nickname</th>
-      <th>Phone number</th>
-      <th>Password</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1 class="material-pink">Usuários</h1>
 
-  <tbody>
-    <% @users.each do |user| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.nickname %></td>
-        <td><%= user.phone_number %></td>
-        <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Apelido</th>
+        <th>Número do Telefone</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.nickname %></td>
+          <td><%= user.phone_number %></td>
+          <td><%= link_to 'Detalhar', user %></td>
+          <td><%= link_to 'Editar', edit_user_path(user), class: "material-gray" %></td>
+          <td><%= link_to 'Deletar', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><br>
 
-<br>
+  <%= link_to "Novo Usuário", new_user_path, class: "waves-effect waves-light btn material-white" %>
 
-<%= link_to 'New User', new_user_path %>
+</div>
