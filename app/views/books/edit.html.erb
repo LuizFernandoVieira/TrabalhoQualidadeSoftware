@@ -1,6 +1,7 @@
-<h1>Editing Book</h1>
+<div class="container">
 
-<%= render 'form', book: @book %>
+  <h1 class="material-pink">Editar Livro</h1>
+  <%= render 'form', book: @book %>
+  <%= link_to 'Cancelar', books_path %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+</div>

@@ -1,24 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+  <h3 class="material-pink">Detalhar Livro</h1>
 
-<p>
-  <strong>Publication:</strong>
-  <%= @book.publication %>
-</p>
+  <p>
+    <strong>Título:</strong>
+    <%= @book.title %>
+  </p>
 
-<p>
-  <strong>Code:</strong>
-  <%= @book.code %>
-</p>
+  <p>
+    <strong>Autor:</strong>
+    <%= @book.author %>
+  </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+  <p>
+    <strong>Data da Publicação:</strong>
+    <%= @book.publication %>
+  </p>
+
+  <p>
+    <strong>Código:</strong>
+    <%= @book.code %>
+  </p>
+
+  <%= link_to 'Editar', edit_book_path(@book) %> |
+  <%= link_to 'Voltar', books_path %>
+
+<div>
