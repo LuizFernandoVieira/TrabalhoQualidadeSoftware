@@ -1,24 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nickname:</strong>
-  <%= @user.nickname %>
-</p>
+  <h3 class="material-pink">Detalhar Usuário</h1>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @user.phone_number %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+  <p>
+    <strong>Nickname:</strong>
+    <%= @user.nickname %>
+  </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <p>
+    <strong>Phone number:</strong>
+    <%= @user.phone_number %>
+  </p>
+
+  <p>
+    <strong>Password:</strong>
+    <%= @user.password %>
+  </p>
+
+  <%= link_to 'Editar', edit_user_path(@user) %> |
+  <%= link_to 'Voltar', users_path %>
+
+</div>

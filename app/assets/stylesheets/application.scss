@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require sweetalert2
  */
 
 @import "materialize";
@@ -27,6 +28,6 @@
 
 .material-white {
   &:visited {
-    color: #fff;  
+    color: #fff;
   }
 }

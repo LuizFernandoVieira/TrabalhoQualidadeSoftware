@@ -14,4 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
 //= require materialize
+//= require sweetalert2
+//= require sweet-alert2-rails

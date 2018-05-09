@@ -21,7 +21,16 @@
           <td><%= user.phone_number %></td>
           <td><%= link_to 'Detalhar', user %></td>
           <td><%= link_to 'Editar', edit_user_path(user), class: "material-gray" %></td>
-          <td><%= link_to 'Deletar', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Deletar', user, method: :delete,
+            data: {
+              confirm: 'Tem certeza que deseja deletar este usuário?',
+              'confirm-button-text': 'Sim',
+              'cancel-button-text': 'Não',
+              'confirm-button-color': '#66CD00',
+              'sweet-alert-type': 'warning',
+              text: 'Uma vez removido, o usuário não poderá ser recuperado'
+            } %>
+          </td>
         </tr>
       <% end %>
     </tbody>

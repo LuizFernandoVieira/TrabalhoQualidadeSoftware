@@ -34,5 +34,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gems Trabalho Qualidade Software
 
 gem 'pg'
+gem 'jquery-rails'
 gem 'materialize-sass'
-gem 'material_icons' 
+gem 'material_icons'
+gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
+gem 'sweet-alert2-rails'
+
+# DANIEL Q Q EU TO FAZENDO DE ERRADO ... N CONSIGO COLOCAR O SWAL NO PROJETO
