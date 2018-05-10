@@ -13,22 +13,12 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 //= require jquery
 //= require materialize
 //= require sweetalert2
 //= require sweet-alert2-rails
+//= require_tree .
 
 $(function() {
-  var teste = $(".dropdown-trigger");
-  console.log(teste);
 
-  $(".dropdown-trigger").dropdown({
-     inDuration: 300,
-     outDuration: 225,
-     constrain_width: true,
-     hover: false,
-     gutter: 0,
-     belowOrigin: false
-  });
 });

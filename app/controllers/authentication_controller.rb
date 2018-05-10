@@ -1,12 +1,9 @@
 class AuthenticationController < ApplicationController
 
-  # render  :login
-  # layout :login
-  # layout 'login'
-  # layout :home
+  layout 'authentication'
 
   def login
-
+    
   end
 
 end
