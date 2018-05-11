@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :books
   resources :users
 
-  root to: 'application#home'
+  root to: 'authentication#authentication'
 
-  get 'login', to: 'authentication#login'
+  post '/login', to: 'authentication#login'
+  get '/logout', to: 'authentication#logout'
+
+  get '/user/shelf', to: 'shelves#show'
 
 end
