@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+  <h1 class="material-pink">Minhas Resenhas</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Livro</th>
+        <th>Autor</th>
+        <th>Resenha</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.book.title %></td>
+          <td><%= review.book.author %></td>
+          <td><%= review.description %></td>
+          <td><%= link_to 'Detalhar', review %></td>
+          <td><%= link_to 'Editar', edit_review_path(review), class: "material-gray" %></td>
+          <td><%= link_to 'Deletar', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <!-- <%= link_to 'Adicionar Livro à Estante', new_book_path, class: "waves-effect waves-light btn material-white" %> -->
+
+</div>

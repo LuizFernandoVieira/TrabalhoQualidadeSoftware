@@ -1,0 +1,19 @@
+// Place all the styles related to the ConsultBooks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$pink: #ee6e73;
+
+.input-field {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 80px !important;
+}
+
+#search {
+  &:focus {
+    border-color: $pink;
+    box-shadow: 0 1px 0 0 $pink !important;
+    padding-left: 50px;
+  }
+}

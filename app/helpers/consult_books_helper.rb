@@ -1,0 +1,2 @@
+module ConsultBooksHelper
+end
