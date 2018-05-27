@@ -14,6 +14,18 @@
 
   <br>
 
-  <!-- <%= link_to 'Adicionar Livro à Estante', new_book_path, class: "waves-effect waves-light btn material-white" %> -->
+  <ul class="card-list">
+    <% @books.each do |book| %>
+      <li class="card-panel">
+        <a class="card-box">
+          <div class="card-header">
+            <i class="small material-icons">book</i>
+          </div>
+          <strong><%= book.author %></strong>
+          <h3><%= book.title %></h3>
+        </a>
+      </li>
+    <% end %>
+  </ul>
 
 </div>
