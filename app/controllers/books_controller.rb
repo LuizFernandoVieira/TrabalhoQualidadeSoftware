@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 
   # GET /books
   # GET /books.json
-  def index    
+  def index
     @books = Book.all
   end
 
@@ -25,6 +25,7 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
+    @book.shelf = User.find(session[:user_id]).shelf
 
     respond_to do |format|
       if @book.save

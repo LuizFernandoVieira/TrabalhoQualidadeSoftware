@@ -11,7 +11,7 @@ class AuthenticationController < ApplicationController
     @user = User.where(nickname: params[:nickname], password: params[:password]).first
     session[:user_id] = @user.id
     if @user
-      redirect_to '/books'
+      redirect_to '/home'
     end
   end
 

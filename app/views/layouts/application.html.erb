@@ -18,12 +18,13 @@
       <div class="nav-wrapper">
         <a class="brand-logo">Qualidade de Software</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="material-white nav-item">Minha Estante</a></li>
-          <li><a href="#" class="material-white nav-item">Minhas Resenhas</a></li>
-          <li><a href="#" class="material-white nav-item">Consultar Livros</a></li>
+          <li><%= link_to 'Minha Estante', myshelf_path ,class: "material-white nav-item" %></li>
+          <li><%= link_to 'Minhas Resenhas', myreviews_path ,class: "material-white nav-item" %></li>
+          <li><%= link_to 'Consultar Livros', consultbooks_path ,class: "material-white nav-item" %></li>
           <li>
             <a class="dropdown-button material-white nav-item" href="#" data-activates="dropdown">Administrativo
-              <i class="material-icons right" style="line-height: 16px;">arrow_drop_down</i></a>
+              <i class="material-icons right" style="line-height: 16px;">arrow_drop_down</i>
+            </a>
           </li>
         </ul>
       </div>
