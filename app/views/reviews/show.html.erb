@@ -1,4 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+  <p id="notice"><%= notice %></p>
+
+  <h3 class="material-pink">Detalhar Resenha</h1>
+
+  <p>
+    <strong>Descrição:</strong>
+    <%= @review.description %>
+  </p>
+
+  <p>
+    <strong>Livro:</strong>
+    <%= @review.book.title %>
+  </p>
+
+  <%= link_to 'Edit', edit_review_path(@review) %> |
+  <%= link_to 'Back', reviews_path %>
+
+<div>

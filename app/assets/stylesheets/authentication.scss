@@ -1,5 +1,38 @@
+.login-form {
+  .login-panel-header {
+    margin: 30px 0px !important;
+  }
+
+  .login-panel-body {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .input-field {
+    margin: 0;
+  }
+}
+
 .login-subheader {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size:0.8rem;
+}
+
+.login-btn {
+  margin-bottom: 10px !important;
+}
+
+.register-container {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#register {
+  color: #BBB;
+  &:hover {
+    background-color: white;
+  }
 }

@@ -1,8 +1,8 @@
-class ReviewsController < ApplicationController
+class Admin::ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   def index
-    @reviews = Review.where(book: User.find(session[:user_id]).shelf.books)
+    @reviews = Review.all
   end
 
   def show

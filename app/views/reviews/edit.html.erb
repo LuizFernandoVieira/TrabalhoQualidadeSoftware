@@ -1,6 +1,7 @@
-<h1>Editando Resenha</h1>
+<div class="container">
 
-<%= render 'form', review: @review %>
+  <h1 class="material-pink">Editando Resenha</h1>
+  <%= render 'form', review: @review %>
+  <%= link_to 'Cancelar', reviews_path %>
 
-<%= link_to 'Show', @review %> |
-<%= link_to 'Back', reviews_path %>
+</div>

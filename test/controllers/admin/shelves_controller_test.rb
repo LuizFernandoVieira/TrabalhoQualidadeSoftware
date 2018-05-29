@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MyShelfControllerTest < ActionDispatch::IntegrationTest
+class Admin::ShelvesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -1,0 +1,30 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h3 class="material-pink">Detalhar Livro</h1>
+
+  <p>
+    <strong>Título:</strong>
+    <%= @book.title %>
+  </p>
+
+  <p>
+    <strong>Autor:</strong>
+    <%= @book.author %>
+  </p>
+
+  <p>
+    <strong>Data da Publicação:</strong>
+    <%= @book.publication %>
+  </p>
+
+  <p>
+    <strong>Código:</strong>
+    <%= @book.code %>
+  </p>
+
+  <%= link_to 'Editar', edit_book_path(@book) %> |
+  <%= link_to 'Voltar', books_path %>
+
+<div>

@@ -8,10 +8,11 @@ $green: #2c9676;
 .input-field {
   width: 30%;
   margin: 0 auto;
-  margin-top: 80px !important;
+  margin-top: 80px;
 }
 
 #search {
+  margin-top: 80px;
   &:focus {
     border-color: $pink;
     box-shadow: 0 1px 0 0 $pink !important;
