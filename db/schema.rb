@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_25_172940) do
+ActiveRecord::Schema.define(version: 2018_06_12_182957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,9 +48,6 @@ ActiveRecord::Schema.define(version: 2018_05_25_172940) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "shelf_id"
-    t.index ["nickname"], name: "index_users_on_nickname", unique: true
-    t.index ["shelf_id"], name: "index_users_on_shelf_id"
   end
 
   add_foreign_key "books", "shelves"

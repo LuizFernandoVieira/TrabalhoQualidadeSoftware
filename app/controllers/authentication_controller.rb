@@ -21,8 +21,7 @@ class AuthenticationController < ApplicationController
   end
 
   def new_user
-    @user = User.new(user_params)
-    @user.shelf = Shelf.create()
+    @user = User.create(user_params.merge(shelf: Shelf.new))
 
     unless @user.save
       redirect_to '/no_access'
