@@ -1,5 +1,4 @@
 class AuthenticationController < ApplicationController
-
   layout 'authentication'
   skip_before_action :verify_authenticity_token
 
@@ -37,7 +36,8 @@ class AuthenticationController < ApplicationController
   end
 
   private
-    def user_params
-      params.permit(:name, :nickname, :phone_number, :password)
-    end
+
+  def user_params
+    params.permit(:name, :nickname, :phone_number, :password)
+  end
 end

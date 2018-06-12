@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-    def authorize_user
-      logged = User.where(id: session[:user_id]).count > 0
-      redirect_to '/no_access' unless logged
-    end
 
+  def authorize_user
+    logged = User.where(id: session[:user_id]).count > 0
+    redirect_to '/no_access' unless logged
+  end
 end
