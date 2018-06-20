@@ -14,11 +14,13 @@
 //= require sweet-alert2-rails
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery
 //= require materialize
 //= require_tree .
 
-// $(document).on('ready page:change', function() {
-//   $('.dropdown-button').dropdown();
-// });
+$(document).on('ready page:change', function() {
+  $('.dropdown-button').dropdown();
+  $('select').material_select();
+});
+
+
