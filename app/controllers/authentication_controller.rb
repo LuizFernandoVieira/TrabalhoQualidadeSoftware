@@ -8,7 +8,12 @@ class AuthenticationController < ApplicationController
   def login
     @user = User.where(nickname: params[:nickname], password: params[:password]).first
     session[:user_id] = @user&.id
-    redirect_to '/home' if @user
+    if @user
+      redirect_to '/home'
+    else
+      sweetalert_error("Nome ou senha incorretos", "Erro", opts = {})
+      redirect_to '/'
+    end
   end
 
   def logout
