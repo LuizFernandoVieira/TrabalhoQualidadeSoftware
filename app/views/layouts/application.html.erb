@@ -22,9 +22,10 @@
       <div class="nav-wrapper">
         <a class="brand-logo">Qualidade de Software</a>
         <ul class="right hide-on-med-and-down">
-          <li><%= link_to 'Minha Estante', books_path ,class: "material-white nav-item" %></li>
-          <li><%= link_to 'Minhas Resenhas', reviews_path ,class: "material-white nav-item" %></li>
-          <li><%= link_to 'Consultar Livros', consultbooks_path ,class: "material-white nav-item" %></li>
+          <li><%= link_to 'Minha Estante', books_path, class: "material-white nav-item" %></li>
+          <li><%= link_to 'Minhas Resenhas', reviews_path, class: "material-white nav-item" %></li>
+          <li><%= link_to 'Consultar Livros', consultbooks_path, class: "material-white nav-item" %></li>
+          <li><%= link_to 'Consultar Usuarios', consultusers_path, class: "material-white nav-item" %></li>
           <% if session[:admin] %>
             <li>
               <a class="dropdown-button material-white nav-item" href="#" data-activates="dropdown">Administrativo
