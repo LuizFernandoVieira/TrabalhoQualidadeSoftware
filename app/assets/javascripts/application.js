@@ -21,6 +21,7 @@
 $(document).on('ready page:change', function() {
   $('.dropdown-button').dropdown();
   $('select').material_select();
+  $('.datepicker').pickadate();
 });
 
 

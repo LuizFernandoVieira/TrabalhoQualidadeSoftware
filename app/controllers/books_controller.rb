@@ -17,21 +17,22 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-
-    books_count = User.find(session[:user_id]).shelf.books.length
-    book_registered = Book.where(title: book_params[:title], author: book_params[:author]).count
-
-    if books_count >= 10
-      sweetalert_error("Essa estante já possuir a quantidade máxima de livros", "Erro", opts = {})
-      return render "new"
-    elsif book_registered > 0
-      sweetalert_error("Esse livro já está na estante", "Erro", opts = {})
-      return render "new"
-    end
-
-    @book.shelf = User.find(session[:user_id]).shelf
-    @book.save
     respond_to do |format|
+
+      books_count = User.find(session[:user_id]).shelf.books.length
+      book_registered = Book.where(title: book_params[:title], author: book_params[:author]).count
+
+      if books_count >= 10
+        sweetalert_error("Essa estante já possuir a quantidade máxima de livros", "Erro", opts = {})
+        return render "new"
+      elsif book_registered > 0
+        sweetalert_error("Esse livro já está na estante", "Erro", opts = {})
+        return render "new"
+      end
+
+      @book.shelf = User.find(session[:user_id]).shelf
+      @book.save
+
       format.html { redirect_to @book, notice: 'Book was successfully created.' }
       format.json { render :show, status: :created, location: @book }
     end

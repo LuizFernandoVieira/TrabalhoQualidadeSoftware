@@ -19,7 +19,8 @@
 
   <div class="field">
     <%= form.label "Livro" %>
-    <%= form.collection_select :book_id, Book.all, :id, :title, class: 'input-field' %>
+    <%= form.collection_select :book_id, User.find(session[:user_id]).shelf.books.order(:title), :id,
+                               :title, class: 'input-field' %>
   </div>
 
   <div class="actions">
