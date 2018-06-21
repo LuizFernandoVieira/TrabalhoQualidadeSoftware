@@ -10,6 +10,13 @@
 
   <div class="container">
 
+    <ul id="dropdown-user" class="dropdown-content">
+      <li><%= link_to 'Minha Estante', books_path %></li>
+      <li><%= link_to 'Minhas Resenhas', reviews_path %></li>
+      <li><%= link_to 'Consultar Livros', consultbooks_path %></li>
+      <li><%= link_to 'Consultar Usuarios', consultusers_path %></li>
+    </ul>
+
     <% if session[:admin] %>
       <ul id="dropdown" class="dropdown-content">
          <li><%= link_to 'Manter Usuários', admin_users_path %></li>
@@ -20,12 +27,15 @@
 
     <nav>
       <div class="nav-wrapper">
-        <a class="brand-logo">Qualidade de Software</a>
+        <a class="brand-logo" style="padding-left: 14px;">Qualidade de Software</a>
         <ul class="right hide-on-med-and-down">
-          <li><%= link_to 'Minha Estante', books_path, class: "material-white nav-item" %></li>
-          <li><%= link_to 'Minhas Resenhas', reviews_path, class: "material-white nav-item" %></li>
-          <li><%= link_to 'Consultar Livros', consultbooks_path, class: "material-white nav-item" %></li>
-          <li><%= link_to 'Consultar Usuarios', consultusers_path, class: "material-white nav-item" %></li>
+
+          <li>
+            <a class="dropdown-button material-white nav-item" href="#" data-activates="dropdown-user" style="padding-left: 56px; padding-right: 56px;">Menu
+              <i class="material-icons right" style="line-height: 16px;">arrow_drop_down</i>
+            </a>
+          </li>
+
           <% if session[:admin] %>
             <li>
               <a class="dropdown-button material-white nav-item" href="#" data-activates="dropdown">Administrativo
