@@ -6,7 +6,7 @@
 
   <%= form_tag consultusers_path, method: "get" do %>
     <div class="input-field">
-      <%= text_field_tag :nickname, params[:nickname], id: "nickname" %>
+      <%= text_field_tag :nickname, params[:nickname], id: "search" %>
       <%= button_tag(class: "label-icon") do %>
         <i class="material-icons">search</i>
       <% end %>
