@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platforms: %I[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :development do
@@ -40,5 +41,6 @@ gem 'materialize-sass'
 gem 'pg'
 gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
 gem 'rubocop', require: false
+gem 'simplecov', require: false, group: :test
 gem 'sweet-alert2-rails'
 gem 'sweetify'
