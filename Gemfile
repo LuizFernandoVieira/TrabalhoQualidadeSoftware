@@ -44,6 +44,5 @@ gem 'rubocop', require: false
 gem 'simplecov', require: false, group: :test
 gem 'sweet-alert2-rails'
 gem 'sweetify'
-
 gem 'shoulda-matchers'
 gem 'factory_bot_rails'
