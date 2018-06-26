@@ -1,19 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe ConsultBooksController, type: :controller do
+RSpec.describe UsersController, type: :controller do
   before :all do
-    @user = FactoryBot.create :user
-    @user2 = FactoryBot.create :user
-    FactoryBot.create_list(:book, 5, shelf_id: @user.shelf.id)
-    FactoryBot.create_list(:book, 7, shelf_id: @user2.shelf.id)
+    @user = FactoryBot.create :user, nickname: 'theMasterKey'
+    FactoryBot.create_list(:user, 10)
   end
 
   describe 'index' do
     it 'should return books according to search query' do
-      get :index, session: {'user_id': @user.id}
-      expect(assigns[:books].count).to eq Book.count
-      get :index, session: {'user_id': @user.id}, params: {search: 'Harry Potter 1'}
-      expect(assigns[:books].count).to eq Book.where('title LIKE ?', '%Harry Potter 1%').count
+      get :consult_users, session: {'user_id': @user.id}
+      expect(assigns[:users].count).to eq User.count
+      get :consult_users, session: {'user_id': @user.id}, params: {nickname: 'theMasterKey'}
+      expect(assigns[:users].count).to eq User.where('nickname LIKE ?', 'theMasterKey').count
     end
   end
 
