@@ -8,14 +8,14 @@ RSpec.describe AuthenticationController, type: :controller do
     FactoryBot.create_list(:book, 7, shelf_id: @user2.shelf.id)
   end
 
-  describe 'login' do
-    it 'should login' do
-      # get :index, session: {'user_id': @user.id}
-      # expect(assigns[:books].count).to eq Book.count
-      # get :index, session: {'user_id': @user.id}, params: {search: 'Harry Potter 1'}
-      # expect(assigns[:books].count).to eq Book.where('title LIKE ?', '%Harry Potter 1%').count
-    end
-  end
+  # describe 'login' do
+  #   it 'should login' do
+  #     # get :index, session: {'user_id': @user.id}
+  #     # expect(assigns[:books].count).to eq Book.count
+  #     # get :index, session: {'user_id': @user.id}, params: {search: 'Harry Potter 1'}
+  #     # expect(assigns[:books].count).to eq Book.where('title LIKE ?', '%Harry Potter 1%').count
+  #   end
+  # end
 
   describe 'new_user' do
     it 'new_user with correct data' do
@@ -38,11 +38,13 @@ RSpec.describe AuthenticationController, type: :controller do
       count = User.count
       get :new_user, params: {'name': 'Nome com mais de 15  chars', 'nickname': 'plcn',
                               'phone_number': '61999876543', password: 'asdf'}
-      expect(User.count).to eq count
-      get :new_user, params: {'name': 'Luiz', 'nickname': 'Apelido com mais de 5 chars',
+      get :new_user, params: {'name': 'NomeComNum15', 'nickname': 'plcn',
                               'phone_number': '61999876543', password: 'asdf'}
       expect(User.count).to eq count
-      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn',
+      get :new_user, params: {'name': 'Luiz.', 'nickname': 'Apelido com mais de 5 chars',
+                              'phone_number': '61999876543', password: 'asdf'}
+      expect(User.count).to eq count
+      get :new_user, params: {'name': 'Luiz ', 'nickname': 'plcn',
                               'phone_number': 'fone com mais de 11', password: 'asdf'}
       expect(User.count).to eq count
       get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn',
