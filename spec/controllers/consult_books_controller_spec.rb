@@ -9,7 +9,7 @@ RSpec.describe ConsultBooksController, type: :controller do
   end
 
   describe 'index' do
-    it 'should return all user books' do
+    it 'should return books according to search query' do
       get :index, session: {'user_id': @user.id}
       expect(assigns[:books].count).to eq Book.count
       get :index, session: {'user_id': @user.id}, params: {search: 'Harry Potter 1'}
