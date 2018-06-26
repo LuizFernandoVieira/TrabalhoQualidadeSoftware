@@ -47,3 +47,4 @@ gem 'sweetify'
 gem 'shoulda-matchers'
 gem 'factory_bot_rails'
 gem 'rails-controller-testing'
+gem 'webpacker', require: false

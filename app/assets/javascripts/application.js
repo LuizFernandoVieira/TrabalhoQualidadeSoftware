@@ -14,14 +14,12 @@
 //= require sweet-alert2-rails
 //= require rails-ujs
 //= require activestorage
-//= require jquery
-//= require materialize
 //= require_tree .
+//= require jquery
+//= require materialize 
 
 $(document).on('ready page:change', function() {
   $('.dropdown-button').dropdown();
   $('select').material_select();
   $('.datepicker').pickadate();
 });
-
-
