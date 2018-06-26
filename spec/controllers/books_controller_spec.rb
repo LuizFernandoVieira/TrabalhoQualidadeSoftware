@@ -29,6 +29,20 @@ RSpec.describe BooksController, type: :controller do
         post :create, params: {book: books_attributes}, session: {'user_id': @user.id}
       }.to change(Book, :count).by 0
     end
+
+    it 'should not create a new book with invalid params' do
+      books_attributes = {title: 'Title with many many chars'}
+      expect {
+        post :create, params: {book: books_attributes}, session: {'user_id': @user.id}
+      }.to change(Book, :count).by 0
+    end
+
+    it 'should not create a new book with invalid params' do
+      books_attributes = {title: 'Title', author: 'Author', code: '012345', shelf_id: @user.shelf.id}
+      expect {
+        post :create, params: {book: books_attributes}, session: {'user_id': @user.id}
+      }.to change(Book, :count).by 0
+    end
   end
 
   describe 'update' do
