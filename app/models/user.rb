@@ -5,9 +5,9 @@
 # acesso apenas às funcionalidades relativas ao usuário
 # logado.
 class User < ApplicationRecord
-  validates :name, presence: true
-  validates :nickname, presence: true
-  validates :password, presence: true
+  validates :name, presence: true, length: { maximum: 15 }
+  validates :nickname, presence: true, length: { maximum: 5 }
+  validates :password, presence: true, length: { maximum: 5 }
 
   has_one :shelf
 end

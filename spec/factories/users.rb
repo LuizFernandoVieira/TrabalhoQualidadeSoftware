@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :user do
     name      'Kilmer'
-    nickname  'Killmonger'
-    password  'tMK'
+    nickname  'tMK'
+    password  'mong'
 
     after(:create) do |user|
       user.shelf = Shelf.create
