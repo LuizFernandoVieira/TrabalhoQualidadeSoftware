@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   database: qualidade_software_db
   pool: 5
-  username: luiz
+  username: aleluia
   password:
 
 development:
