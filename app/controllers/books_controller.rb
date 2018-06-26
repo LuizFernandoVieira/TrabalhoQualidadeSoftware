@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = User.find(session[:user_id]).shelf.books
+    @books = User.find(session[:user_id])&.shelf&.books
   end
 
   def show

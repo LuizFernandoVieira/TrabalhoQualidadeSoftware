@@ -1,48 +1,17 @@
-require 'test_helper'
+require 'rails_helper'
 
-class BooksControllerSpec < ActionDispatch::IntegrationTest
-  setup do
-    @book = books(:one)
+
+RSpec.describe BooksController, type: :controller  do
+  before :all do
+    @user = FactoryBot.create :user
   end
 
-  test "should get index" do
-    get books_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_book_url
-    assert_response :success
-  end
-
-  test "should create book" do
-    assert_difference('Book.count') do
-      post books_url, params: { book: { author: @book.author, code: @book.code, publication: @book.publication, title: @book.title } }
+  describe 'index' do
+    it 'should return all user books' do
+      FactoryBot.create_list(:book, 5, shelf_id: @user.shelf.id)
+      get(:index, session: {'user_id': @user.id})
+      expect(response).to have_http_status :success
+      expect(assigns[:books].count).to eq 5
     end
-
-    assert_redirected_to book_url(Book.last)
-  end
-
-  test "should show book" do
-    get book_url(@book)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_book_url(@book)
-    assert_response :success
-  end
-
-  test "should update book" do
-    patch book_url(@book), params: { book: { author: @book.author, code: @book.code, publication: @book.publication, title: @book.title } }
-    assert_redirected_to book_url(@book)
-  end
-
-  test "should destroy book" do
-    assert_difference('Book.count', -1) do
-      delete book_url(@book)
-    end
-
-    assert_redirected_to books_url
   end
 end
