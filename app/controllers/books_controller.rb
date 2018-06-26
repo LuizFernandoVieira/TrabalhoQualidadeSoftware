@@ -8,7 +8,7 @@ class BooksController < ApplicationController
   # livros recuperados para a tela de listagem dos livros
   # na estante do usuário logado
   def index
-    @books = User.find(session[:user_id]).shelf.books
+    @books = User.find(session[:user_id])&.shelf&.books
   end
 
   # Recupera um livro específico do usuário logado
