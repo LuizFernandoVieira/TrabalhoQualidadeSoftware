@@ -39,7 +39,7 @@ class AuthenticationController < ApplicationController
     @user = User.create(user_params.merge(shelf: Shelf.new))
 
     unless @user.save
-      redirect_to '/no_access'
+      return redirect_to '/no_access'
     end
 
     redirect_to '/'

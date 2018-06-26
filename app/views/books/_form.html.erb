@@ -32,7 +32,13 @@
     <%= form.text_field :code %>
   </div>
 
-  <div class="actions">
+  <div class="field">
+    <%= form.label "Gênero Literario" %>
+    <%= form.select :genre, Book.genres.keys %>
+  </div>
+
+
+    <div class="actions">
     <%= form.submit "Salvar", class: "waves-effect waves-light btn" %>
   </div>
 

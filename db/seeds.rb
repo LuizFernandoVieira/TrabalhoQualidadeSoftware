@@ -23,5 +23,5 @@ Review.create(description: 'Narnia é um livro lixo', book: book_narnia)
 Review.create(description: 'Narnia é um livro bom', book: book_narnia)
 Review.create(description: 'A Revolução dos Bichos é um livro bom', book: book_bichos)
 
-User.create(name: 'admin', nickname: 'admin', password: '1234', shelf: shelf_admin)
-User.create(name: 'user', nickname: 'user', password: '1234', shelf: shelf_user)
+User.create(name: 'admin', nickname: 'admin', password: 'asdf', shelf: shelf_admin)
+User.create(name: 'user', nickname: 'user', password: 'asdf', shelf: shelf_user)
