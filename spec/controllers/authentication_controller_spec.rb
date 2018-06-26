@@ -18,10 +18,36 @@ RSpec.describe AuthenticationController, type: :controller do
   end
 
   describe 'new_user' do
-    it 'new_user' do
+    it 'new_user with correct data' do
       count = User.count
-      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn', 'phone_number': '61999876543'}
+      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn', 'phone_number': '61999876543', password: 'asdf'}
       expect(User.count).to eq count + 1
+    end
+
+    it 'new_user with missing required data' do
+      count = User.count
+      get :new_user, params: {'nickname': 'plcn', 'phone_number': '61999876543', password: 'asdf'}
+      expect(User.count).to eq count
+      get :new_user, params: {'name': 'Luiz', 'phone_number': '61999876543', password: 'asdf'}
+      expect(User.count).to eq count
+      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn', 'phone_number': '61999876543'}
+      expect(User.count).to eq count
+    end
+
+    it 'new_user with invalid data' do
+      count = User.count
+      get :new_user, params: {'name': 'Nome com mais de 15  chars', 'nickname': 'plcn',
+                              'phone_number': '61999876543', password: 'asdf'}
+      expect(User.count).to eq count
+      get :new_user, params: {'name': 'Luiz', 'nickname': 'Apelido com mais de 5 chars',
+                              'phone_number': '61999876543', password: 'asdf'}
+      expect(User.count).to eq count
+      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn',
+                              'phone_number': 'fone com mais de 11', password: 'asdf'}
+      expect(User.count).to eq count
+      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn',
+                              'phone_number': '61999876543', password: 'senha com mais de 4 chars'}
+      expect(User.count).to eq count
     end
   end
 end
