@@ -9,7 +9,7 @@ RSpec.describe AuthenticationController, type: :controller do
   end
 
   describe 'login' do
-    it 'login' do
+    it 'should login' do
       # get :index, session: {'user_id': @user.id}
       # expect(assigns[:books].count).to eq Book.count
       # get :index, session: {'user_id': @user.id}, params: {search: 'Harry Potter 1'}
@@ -17,4 +17,11 @@ RSpec.describe AuthenticationController, type: :controller do
     end
   end
 
+  describe 'new_user' do
+    it 'new_user' do
+      count = User.count
+      get :new_user, params: {'name': 'Luiz', 'nickname': 'plcn', 'phone_number': '61999876543'}
+      expect(User.count).to eq count + 1
+    end
+  end
 end
