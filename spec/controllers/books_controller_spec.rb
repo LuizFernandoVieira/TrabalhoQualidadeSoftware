@@ -39,4 +39,12 @@ RSpec.describe BooksController, type: :controller do
       expect(book.reload.code).to eq '7000'
     end
   end
+
+  describe 'destroy' do
+    it 'should delete a book' do
+      book = @user.shelf.books.first
+      put :destroy, params: {id: book.id}, session: {'user_id': @user.id}
+      expect(Book.exists? book.id).to be_falsey
+    end
+  end
 end
