@@ -34,7 +34,6 @@ Esse projeto é um projeto rails e por isso seguiu a estrutura padrão de pastas
 Enviar para fernandoalbuquerque@yahoo.com.br
 
 Heroku
-Prints (análise estática rubocop / cobertura de teste simplecov / doxygen)
 Validação Javascript no Cadastro do Telefone
 Adicionar outras restrições
 Smoketest
