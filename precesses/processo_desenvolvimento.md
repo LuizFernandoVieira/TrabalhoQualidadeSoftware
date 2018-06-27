@@ -12,9 +12,9 @@
 
 ### Artefatos que precisaram ser construídos
 
-Planos de teste e desenvolvimento
-Documentação
-Código
-Testes
-Relatório de cobertura do teste
-Relatório de analisador estático
+* Planos de teste e desenvolvimento
+* Documentação
+* Código
+* Testes
+* Relatório de cobertura do teste
+* Relatório de analisador estático
