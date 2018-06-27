@@ -28,12 +28,3 @@ Esse projeto é um projeto rails e por isso seguiu a estrutura padrão de pastas
 * Rspec - $ rspec
 * Rubocop - $ rubocop
 * Simplecov - gerado na pasta /coverage depois de rodar o teste, ou seja, $ rspec
-
-### TODO
-
-Enviar para fernandoalbuquerque@yahoo.com.br
-
-Heroku
-Validação Javascript no Cadastro do Telefone
-Adicionar outras restrições
-Smoketest
