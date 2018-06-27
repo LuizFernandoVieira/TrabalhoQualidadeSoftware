@@ -13,6 +13,6 @@ class Book < ApplicationRecord
   has_many :reviews
 
   def duplicated_whitespaces
-    errors.add(:name, 'Não pode have espaço em branco duplicado. ') if (title&.gsub('  ', ' ') != title)
+    errors.add(:title, 'Não pode have espaço em branco duplicado. ') if (title&.gsub('  ', ' ') != title)
   end
 end
