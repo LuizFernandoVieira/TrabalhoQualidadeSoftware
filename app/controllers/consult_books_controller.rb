@@ -4,4 +4,8 @@ class ConsultBooksController < ApplicationController
   def index
     @books = Book.where(["title LIKE ?", "%#{params[:search]}%"])
   end
+
+  def trade
+    @books = Book.where(["title LIKE ?", "%#{params[:search]}%"]).where(trade: true)
+  end
 end

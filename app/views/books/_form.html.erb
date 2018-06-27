@@ -37,8 +37,12 @@
     <%= form.select :genre, Book.genres.keys %>
   </div>
 
+  <div class="field">
+    <%= form.check_box :trade, id: 'chbox' %>
+    <%= form.label "Disponível Para Troca?", for: 'chbox', id: 'chbox' %>
+  </div>
 
-    <div class="actions">
+  <div class="actions">
     <%= form.submit "Salvar", class: "waves-effect waves-light btn" %>
   </div>
 
