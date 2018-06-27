@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_26_225627) do
+ActiveRecord::Schema.define(version: 2018_06_27_012941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_06_26_225627) do
     t.datetime "updated_at", null: false
     t.bigint "shelf_id"
     t.integer "genre"
+    t.boolean "trade", default: false
     t.index ["shelf_id"], name: "index_books_on_shelf_id"
   end
 

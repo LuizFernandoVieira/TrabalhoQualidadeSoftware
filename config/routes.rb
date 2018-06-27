@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :reviews
 
   get '/consultbooks', to: 'consult_books#index', as: 'consultbooks'
+  get '/consulttradebooks', to: 'consult_books#trade', as: 'consulttradebooks'
   get '/consultusers', to: 'users#consult_users', as: 'consultusers'
 
   namespace :admin do
