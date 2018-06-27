@@ -22,4 +22,4 @@ Os testes foram finalizados quando implementamos pelo menos um teste para cada u
 
 ### Documentos que serão criados como parte do processo de teste
 
-Ao final do processo de teste o analisador simplecov gera uma pasta com os resultados das análises de cobertura. Além destes, são geradas saídas do rubocop no terminal informando possíveis problemas detectados pela análise estática do código e é informada (pelo Rspec) a quantidade de testes que passou e a quantidade de testes que falhou.
+Ao final do processo de teste o analisador simplecov gera uma pasta com os resultados das análises de cobertura de linhas de código. Além destes, são geradas saídas do rubocop no terminal informando possíveis problemas detectados pela análise estática do código e é informada pelo Rspec (analisador dinâmico) a quantidade de testes que passaram e a quantidade de testes que falharam.
