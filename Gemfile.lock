@@ -290,7 +290,7 @@ DEPENDENCIES
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
-  sprockets (~> 3.7, >= 3.7.2)
+  sprockets (~> 3.7.2, >= 3.7.2)
   sweet-alert2-rails
   sweetify
   turbolinks (~> 5)
